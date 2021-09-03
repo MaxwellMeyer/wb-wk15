@@ -1,0 +1,33 @@
+WhiteBoarding!
+
+prompt # 2:
+
+Array De-Dupeing:
+
+Write an algorithm that removes duplicates from an array, do not use Filter() to do this.  If time, solve with recursion!
+
+
+thoughts/steps:
+loop through the array
+loop within that loop to compare 
+if they are the same, remove duplicate item using splice method
+return the array, with duplicates removed
+
+function deDupe(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; i <arr.length; j++){
+      if (arr[j] === arr[i]) {
+        arr.splice(j, 1) //intended to just remove one item at specified index
+     } else {
+       return arr;
+     } 
+    }
+  }
+}
+//////////////////////////
+
+const otherDeDupe = (array) => {
+  let newSet = [... Set(array)];  // since sets can't contain duplicates, instantiating newSet using the array arg should work
+  return newSet;
+}
+
